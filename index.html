@@ -23,19 +23,30 @@
 
 <body>
     <header>
-        <nav class="flex items-center justify-between p-4 bg-[rgba(249,247,243,1)]">
+        <nav class="flex items-center justify-around p-4 bg-[#fff5e0]">
             <div>
-                <button class="btn btn-primary">Blog</button>
+                <button class="text-[20px] font-semibold bg-[rgba(180,244,97,1)] py-3 px-8 rounded-lg">
+                    Blog
+                </button>
             </div>
-            <div class="text-center">
-                <img src="assets/logo.png" alt="Logo of donation">
-                <h1 class="text-lg font-bold text-black">Donate Bangladesh</h1>
+
+            <div class="flex items-center space-x-2">
+                <div>
+                    <img src="assets/logo.png" alt="Logo of donation" class="h-6 w-6" >
+                </div>
+                <div class="text-center">
+                    <h1 class="text-lg font-semibold text-black">Donate Bangladesh</h1>
+                </div>
             </div>
-            <div>
-                <form>
-                    <input type="text" placeholder="Type here" class="input w-full max-w-xs" />
-                </form>
-            </div>
+
+            <div class="flex items-center gap">
+                <div>
+                    <img src="assets/coin.png" alt="">
+                </div>
+                <div>
+                  <div class="text-[rgba(17,17,17,0.7)] font-medium text-xl">5500 BDT</div>
+                </div>
+              </div>
         </nav>
     </header>
 </body>
