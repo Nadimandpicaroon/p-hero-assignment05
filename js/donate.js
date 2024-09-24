@@ -1,34 +1,38 @@
 // donation button tab
-document.getElementById('donation-tab').addEventListener('click', function(){
-    const main = document.getElementById('main');
-    main.classList.remove('hidden');
-})
+// document.getElementById('donation-tab').addEventListener('click', function(){
+//     const main = document.getElementById('main');
+//     main.classList.remove('hidden');
+// })
 
 // add money in the main section
 
 // noakhali part
 
 document.getElementById('donate-btn-noakhali').addEventListener('click', function(){
-     const value = document.getElementById('donate-noakhali').value;
-    if (value <= 0 || isNaN(value)){
+    const valueNoakhali = document.getElementById('donate-noakhali').value;
+    if (valueNoakhali <= 0 || isNaN(valueNoakhali)){
         alert ('invalid input');
         return;
     }
 
-    const donateNoakhali = parseFloat(value);
+    const donateNoakhali = parseFloat(valueNoakhali);
     const balanceNoakhali = parseFloat(document.getElementById('balance-noakhali').innerText);
     const myCurrentBalance = parseFloat(document.getElementById('my-current-balance').innerText);
 
    const newBalanceNoakhali = donateNoakhali + balanceNoakhali;
 
    const newCurrentBalance = myCurrentBalance - donateNoakhali;
-   console.log(typeof donateNoakhali)
-   if(newBalanceNoakhali < donateNoakhali){
+
+   if(newCurrentBalance<0){
+    alert('balance cant be negative');
+    return;
+   }
+   if( newBalanceNoakhali < donateNoakhali){
     alert('invalid input');
     return;
    }
-   else{
-    document.getElementById('my_modal_4');
+   else {
+    my_modal_4.showModal()
    }
    
 
@@ -38,10 +42,14 @@ document.getElementById('donate-btn-noakhali').addEventListener('click', functio
 
 // feni part
 
-document.getElementById('donate-btn-feni').addEventListener('click', function(event){
-     event.preventDefault();
+document.getElementById('donate-btn-feni').addEventListener('click', function(){
+    const valueFeni = document.getElementById('donate-feni').value;
+    if (valueFeni <= 0 || isNaN(valueFeni)){
+        alert ('invalid input');
+        return;
+    }
 
-    const donateFeni = parseFloat(document.getElementById('donate-feni').value);
+    const donateFeni = parseFloat(valueFeni);
     const balanceFeni = parseFloat(document.getElementById('balance-feni').innerText);
     const myCurrentBalance = parseFloat(document.getElementById('my-current-balance').innerText);
 
@@ -49,9 +57,16 @@ document.getElementById('donate-btn-feni').addEventListener('click', function(ev
 
    const newCurrentBalance = myCurrentBalance - donateFeni;
    
-   if(donateFeni <= 0 || isNaN(donateFeni) || newBalanceFeni < donateFeni){
+   if(newCurrentBalance<0){
+    alert('balance cant be negative');
+    return;
+   }
+   if( newBalanceFeni < donateFeni){
     alert('invalid input');
     return;
+   }
+   else {
+    my_modal_6.showModal()
    }
 
    document.getElementById('balance-feni').innerText = newBalanceFeni;
@@ -61,8 +76,13 @@ document.getElementById('donate-btn-feni').addEventListener('click', function(ev
 // quota part 
 
 document.getElementById('donate-btn-qouta').addEventListener('click', function(){
+    const valueQouta = document.getElementById('donate-qouta').value;
+    if (valueQouta <= 0 || isNaN(valueQouta)){
+        alert ('invalid input');
+        return;
+    }
 
-    const donateQouta = parseFloat(document.getElementById('donate-qouta').value);
+    const donateQouta = parseFloat(valueQouta);
     const balanceQouta = parseFloat(document.getElementById('balance-qouta').innerText);
     const myCurrentBalance = parseFloat(document.getElementById('my-current-balance').innerText);
 
@@ -70,14 +90,54 @@ document.getElementById('donate-btn-qouta').addEventListener('click', function()
 
    const newCurrentBalance = myCurrentBalance - donateQouta;
    
-   if(donateQouta <= 0 || isNaN(donateQouta) || newBalanceQouta < donateQouta){
+   if(newCurrentBalance<0){
+    alert('balance cant be negative');
+    return;
+   }
+   if( newBalanceQouta < donateQouta){
     alert('invalid input');
     return;
+   }
+   else {
+    my_modal_5.showModal()
    }
 
    document.getElementById('balance-qouta').innerText = newBalanceQouta;
    document.getElementById('my-current-balance').innerText = newCurrentBalance;
 })
+
+
+// document.getElementById('donate-btn-qouta').addEventListener('click', function(){
+//     const valueQuota = document.getElementById('donate-qouta').value;
+//     if (valueQouta <= 0 || isNaN(valueQouta)){
+//         alert ('invalid input');
+//         return;
+//     }
+
+//     const donateQouta = parseFloat(valueQouta);
+//     const balanceQouta = parseFloat(document.getElementById('balance-qouta').innerText);
+//     const myCurrentBalance = parseFloat(document.getElementById('my-current-balance').innerText);
+
+//    const newBalanceQouta = donateQouta + balanceQouta;
+
+//    const newCurrentBalance = myCurrentBalance - donateQouta;
+   
+//    if(newCurrentBalance<0){
+//     alert('balance cant be negative');
+//     return;
+//    }
+//    if( newBalanceQouta < donateQouta){
+//     alert('invalid input');
+//     return;
+//    }
+//    else {
+//     my_modal_5.showModal()
+//    }
+
+
+//    document.getElementById('balance-qouta').innerText = newBalanceQouta;
+//    document.getElementById('my-current-balance').innerText = newCurrentBalance;
+// })
 
 
 // history button tab 
