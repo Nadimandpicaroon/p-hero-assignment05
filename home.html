@@ -13,26 +13,65 @@
      <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-    <div class="collapse collapse-arrow bg-base-200">
-        <input type="radio" name="my-accordion-2" checked="checked" />
-        <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
-        <div class="collapse-content">
-          <p>hello</p>
+    <nav class="flex flex-col md:flex-row items-center justify-around p-4 bg-[rgba(243,237,237,0.9)] bg-opacity-80 mb-0 md:mb-16">
+        <div class="mb-4 md:mb-0">
+            <a href="index.html" class="text-[20px] font-bold bg-[rgba(180,244,97,1)] py-3 px-8 rounded-md text-black">
+                Home
+            </a>
         </div>
-      </div>
-      <div class="collapse collapse-arrow bg-base-200">
-        <input type="radio" name="my-accordion-2" />
-        <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
-        <div class="collapse-content">
-          <p>hello</p>
+
+        <div class="flex items-center space-x-2 mb-3 md:mb-0">
+            <div>
+                <img src="assets/logo.png" alt="Logo of donation" class="h-6 w-6">
+            </div>
+            <div class="text-center">
+                <h1 class="text-lg font-semibold text-black">Donate Bangladesh</h1>
+            </div>
         </div>
-      </div>
-      <div class="collapse collapse-arrow bg-base-200">
-        <input type="radio" name="my-accordion-2" />
-        <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
-        <div class="collapse-content">
-          <p>hello</p>
+
+        <div class="flex items-center gap">
+            <div>
+                <img src="assets/coin.png" alt="">
+            </div>
+            <div>
+                <div class="text-[rgba(17,17,17,0.7)] font-medium text-lg">5500 BDT</div>
+            </div>
         </div>
-      </div>
+    </nav>
+    <!-- main part -->
+    <div class="mx-auto mr-9 ml-9 ">
+        <div class="mb-8">
+            <h1 class="text-black font-bold text-5xl">Important FAQ?
+            </h1>
+        </div>
+        <div class="collapse collapse-arrow bg-base-200">
+            <input type="radio" name="my-accordion-2" checked="checked" />
+            <div class="collapse-title text-2xl font-semibold mt-5">what is the Document Object Model (DOM)?</div>
+            <div class="collapse-content mb-5">
+              <p class="font-semibold text-lg">hello</p>
+            </div>
+          </div>
+          <div class="collapse collapse-arrow bg-base-200">
+            <input type="radio" name="my-accordion-2" />
+            <div class="collapse-title text-2xl font-semibold mt-5">How do you select an element from the DOM?</div>
+            <div class="collapse-content mb-5">
+              <p class="font-semibold text-lg">hello</p>
+            </div>
+          </div>
+          <div class="collapse collapse-arrow bg-base-200">
+            <input type="radio" name="my-accordion-2" />
+            <div class="collapse-title text-2xl font-semibold mt-5">What is the event delegation in the context of DOM, And is it useful?</div>
+            <div class="collapse-content mb-5">
+              <p class="font-semibold text-lg">hello</p>
+            </div>
+          </div>
+          <div class="collapse collapse-arrow bg-base-200">
+            <input type="radio" name="my-accordion-2" />
+            <div class="collapse-title text-2xl font-semibold mt-5">How do you manipulate an elements atribute's and stylr by using the DOM?</div>
+            <div class="collapse-content mb-5">
+              <p class="font-semibold text-lg">hello</p>
+            </div>
+          </div>
+    </div>
 </body>
 </html>

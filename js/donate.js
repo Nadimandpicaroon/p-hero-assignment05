@@ -31,7 +31,6 @@ document.getElementById('donate-btn-noakhali').addEventListener('click', functio
    document.getElementById('balance-noakhali').innerText = newBalanceNoakhali;
    if(donateNoakhali <= 0 || isNaN(donateNoakhali) || newBalanceNoakhali < donateNoakhali){
     alert('invalid input');
-    console.log(balanceNoakhali);
     return;
    }
 })
