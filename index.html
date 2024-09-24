@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
     <meta charset="UTF-8">
@@ -21,11 +21,11 @@
     </style>
 </head>
 
-<body class="bg-[#e9dcd1]">
+<body>
     <header class="backdrop-blur-lg sticky top-0 z-50">
-        <nav class="flex flex-col md:flex-row items-center justify-around p-4">
+        <nav class="flex flex-col md:flex-row items-center justify-around p-4 bg-[rgba(243,237,237,0.9)] bg-opacity-80 mb-0 md:mb-16">
             <div class="mb-4 md:mb-0">
-                <button class="text-[20px] font-semibold bg-[rgba(180,244,97,1)] py-2 px-5 rounded-md text-black">
+                <button class="text-[20px] font-semibold bg-[rgba(180,244,97,1)] py-3 px-8 rounded-md text-black">
                     Blog
                 </button>
             </div>
@@ -49,19 +49,19 @@
             </div>
         </nav>
         <!-- button of donation and history -->
-        <div class="flex  flex-col md:flex-row justify-center gap-4 my-6">
-            <button id="assistant-tab"
-                class="py-2 px-5 rounded-md text-black font-semibold bg-[rgba(180,244,97,1)]">
+        <div class="flex  flex-col md:flex-row justify-center gap-5 my-6">
+            <button id="donation-tab"
+                class="py-4 px-8 rounded-md text-black font-bold text-xl bg-[rgba(180,244,97,1)] hover:bg-lime-400 transition">
                 Donation
             </button>
             <button id="history-tab"
-                class="py-2 rounded-r-md text-gray-600 font-semibold">
+                class="py-4 px-7 rounded-md border text-black font-bold text-xl hover:bg-slate-200 transition">
                 History
             </button>
         </div>
     </header>
 
-    <main class="bg-white">
+    <main id="main" class="hidden bg-white ">
         <!-- donation for noakhali -->
 
           <div class="max-w-7xl mx-auto h-auto mb-12 bg-white rounded-lg shadow-md flex  flex-col md:flex-row overflow-hidden p-5 gap-4">
@@ -75,7 +75,9 @@
                 <!-- Top Text Field with Icon -->
                 <div class="w-1/4 flex items-center bg-[rgba(17,17,17,0.05)] rounded-lg p-2 mb-4">
                     <img src="assets/coin.png" alt="Coin Icon" class="mr-2">
-                    <span class="text-gray-700 font-medium">0 BDT</span>
+                    <span id="balance-noakhali" class="text-gray-700 font-medium mr-2">0</span>
+                    <span class="text-gray-700 font-medium">BDT</span>
+
                 </div>
     
                 <!-- Headline -->
@@ -90,10 +92,10 @@
                 </p>
     
                 <!-- Donation Input Field -->
-                <input type="text" placeholder="Write Donation Amount" class="w-full p-4 mb-4 border border-gray-300 rounded-lg placeholder-gray-500 focus:outline-none focus:ring-2">
+                <input type="text" id="donate-noakhali" placeholder="Write Donation Amount" class="w-full p-4 mb-4 border border-gray-300 rounded-lg placeholder-gray-500 focus:outline-none focus:ring-2">
     
                 <!-- Donate Button -->
-                <button class="w-full bg-[rgba(180,244,97,1)] text-black font-semibold text-xl py-4 rounded-lg hover:bg-lime-400 transition">
+                <button id="donate-btn-noakhali" class="w-full bg-[rgba(180,244,97,1)] text-black font-semibold text-xl py-4 rounded-lg hover:bg-lime-400 transition">
                     Donate Now
                 </button>
             </div>
@@ -165,6 +167,8 @@
             </div>
         </div>
     </main>
+    <script src="js/utilities.js"></script>
+    <script src="js/donate.js"></script>
 </body>
 
 </html>
