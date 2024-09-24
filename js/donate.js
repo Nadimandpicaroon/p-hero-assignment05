@@ -9,19 +9,28 @@ document.getElementById('donation-tab').addEventListener('click', function(){
 // noakhali part
 
 document.getElementById('donate-btn-noakhali').addEventListener('click', function(){
+     const value = document.getElementById('donate-noakhali').value;
+    if (value <= 0 || isNaN(value)){
+        alert ('invalid input');
+        return;
+    }
 
-    const donateNoakhali = parseFloat(document.getElementById('donate-noakhali').value);
+    const donateNoakhali = parseFloat(value);
     const balanceNoakhali = parseFloat(document.getElementById('balance-noakhali').innerText);
     const myCurrentBalance = parseFloat(document.getElementById('my-current-balance').innerText);
 
    const newBalanceNoakhali = donateNoakhali + balanceNoakhali;
 
    const newCurrentBalance = myCurrentBalance - donateNoakhali;
-   
-   if(donateNoakhali <= 0 || isNaN(donateNoakhali) || newBalanceNoakhali < donateNoakhali){
+   console.log(typeof donateNoakhali)
+   if(newBalanceNoakhali < donateNoakhali){
     alert('invalid input');
     return;
    }
+   else{
+    document.getElementById('my_modal_4');
+   }
+   
 
    document.getElementById('balance-noakhali').innerText = newBalanceNoakhali;
    document.getElementById('my-current-balance').innerText = newCurrentBalance;
@@ -86,4 +95,5 @@ historyTab.addEventListener('click', function(){
       "hover:bg-lime-400",
       "transition"  
     );
-})
+    document.getElementById('main').classList.add('hidden');
+});
